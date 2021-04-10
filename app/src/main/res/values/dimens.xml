@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="error_text_size">24sp</dimen>
+    <integer name="images_grid_span_count">3</integer>
+
+    <dimen name="flexible_gallery_span_min_height">80dp</dimen>
+    <dimen name="flexible_gallery_span_max_height">160dp</dimen>
+
+    <integer name="fixed_gallery_span_height_dp">120</integer>
+</resources>

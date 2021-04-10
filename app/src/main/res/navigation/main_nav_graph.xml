@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/chooserFragment">
+
+    <fragment
+        android:id="@+id/chooserFragment"
+        android:name="test.com.yitexam.ui.ChooserFragment"
+        android:label="fragment_chooser"
+        tools:layout="@layout/fragment_chooser">
+
+        <action
+            android:id="@+id/action_chooserFragment_to_imagesFragment"
+            app:destination="@id/galleryFragment">
+
+            <argument
+                android:name="fixed_height"
+                android:defaultValue="false" />
+        </action>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/galleryFragment"
+        android:name="test.com.yitexam.ui.gallery.GalleryFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/gallery_fragment">
+
+        <action
+            android:id="@+id/action_imagesFragment_to_imagesViewerFragment"
+            app:destination="@id/imagesViewerFragment">
+            <argument
+                android:name="image_position"
+                android:defaultValue="0" />
+        </action>
+
+        <argument
+            android:name="fixed_height"
+            android:defaultValue="false"
+            app:argType="boolean" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/imagesViewerFragment"
+        android:name="test.com.yitexam.ui.viewer.ImagesViewerFragment"
+        android:label="ImagesViewerFragment"
+        tools:layout="@layout/fragment_images_viewer">
+        <argument
+            android:name="image_position"
+            android:defaultValue="0"
+            app:argType="integer" />
+    </fragment>
+
+</navigation>

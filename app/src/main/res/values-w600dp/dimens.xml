@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="images_grid_span_count">4</integer>
+
+    <dimen name="flexible_gallery_span_min_height">100dp</dimen>
+    <dimen name="flexible_gallery_span_max_height">200dp</dimen>
+
+    <integer name="fixed_gallery_span_height_dp">140</integer>
+</resources>
